@@ -83,6 +83,7 @@ body {
 /* layout */
 
 .container {
+    position: relative;
     width: 550px;
     height: 100%;
     margin: 0 auto;
@@ -91,7 +92,8 @@ body {
 
 .hero-section {
     position: relative;
-    width: 550px;
+    width: 100%;
+    /* max-width: 550px; */
     height: 208px;
     display: flex;
     justify-content: space-between;
@@ -132,7 +134,8 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    width: 462px;
+    width: 84%;
+    max-width: 462px;
     height: 38px;
     align-items: center;
     border-radius: 6px;
