@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="watchlist.css">
+</head>
+<body>
+    <div class="container">
+        <header class="hero-section">
+            <h1 class="hero-title">My Watchlist</h1>
+            <h3><a href="index.html" class="hero-watchlist-link">Search for movies</a></h3>
+        </header>
+        
+        <main>
+            <div id="watchlist" class="watchlist">
+                <p class="empty-wl-text">Your watchlist is looking a little empty...</p>
+                <div class="add-block">
+                    <a href="index.html">
+                        <img src="/img/add-icon.png" alt="movie icone" class="add-icon">
+                    </a>
+                    <p class="empty-wl-note">Let’s add some movies!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

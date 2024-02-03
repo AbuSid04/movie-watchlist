@@ -1,0 +1,252 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+/* Typography */
+
+.hero-title{
+    font-size: 42.795px;
+    font-weight: 800;
+    line-height: 23.775px; /* 55.556% */
+    letter-spacing: -1.926px;
+}
+
+.hero-watchlist-link {
+    color: #fff;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px; /* 142.857% */
+    text-decoration: none;
+}
+
+.search-movie {
+    color: #A5A5A5;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+.search-btn {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+.empty-page-text {
+    color: #2E2E2F;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px; /* 111.111% */
+    margin: 0 0 300px;
+}
+
+.empty-search{
+    color: #787878;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px; /* 111.111% */
+}
+
+.movie-title {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px; /* 111.111% */
+}
+
+.movie-rating, .movie-duration, .movie-genre, .movie-add-text{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+}
+
+.movie-plot {
+    color: #A5A5A5;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+
+/* layout */
+
+.container {
+    width: 550px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #121212;;
+}
+
+.hero-section {
+    position: relative;
+    width: 550px;
+    height: 208px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section::before {    
+    content: "";
+    background: url("/img/bkgrnd.png"), lightgray 0px -158.291px / 100% 423.007% no-repeat;
+    background-size: cover;
+    background-position-y: 25%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.35;
+}
+
+.hero-title, 
+.hero-watchlist-link {
+    position: relative;
+}
+
+.hero-title {
+    margin-left: 42px;
+}
+
+.hero-watchlist-link {
+    margin-right: 46px;
+}
+
+.search-bar {
+    position: absolute;
+    top: 189px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 462px;
+    height: 38px;
+    align-items: center;
+    border-radius: 6px;
+    background: #2E2E2F;
+}
+
+.search-icon {
+    color: #9CA3AF;
+    width: 20px;
+    height: 20px;
+    margin-left: 13px;
+    margin-top: 8px;
+}
+
+.search-movie {
+    width: 100%;
+    background-color: #2E2E2F;
+    border: none;
+    padding: 9px 13px;
+}
+
+.search-movie:focus {
+    outline: none;
+}
+
+.search-btn {
+    width: 120px;
+    align-self: stretch;
+    padding: 9px 11px 9px 17px;
+    border-radius: 0px 6px 6px 0px;
+    background: #4B4B4B;
+    border: none;
+    cursor: pointer;
+}
+
+.movies-list{
+    flex-direction: column;
+    margin-top: 36px;
+}
+
+.empty-page-icon {
+    width: 70px;
+    height: 61.25px;
+    margin: 180px auto 8px;
+}
+
+.empty-search {
+    margin: 300px 105px;
+}
+
+.movie-block, .movie-info-block, .movie-title-block, .movie-add-block, .movies-list{
+    display: flex;
+}
+
+.movie-block{
+    margin: 25px 44px;
+    height: 147.411px;
+}
+
+.movie-block p, 
+.movie-block h2{
+    margin: 0;
+}
+
+.movie-poster{
+    width: 99px;
+    height: 147.411px;
+}
+
+.movie-info-block{
+    flex-direction: column;
+    padding-left: 21px;
+    padding-bottom: 10px; 
+}
+
+.movie-title-block {
+    align-items: flex-end;
+    padding-top: 12px;
+}
+
+.movie-rating-icon {
+    align-self: center;
+    width: 15px;
+    height: 15px;
+    margin: 0 6px 0 12px;
+}
+
+.movie-add-block {
+    align-items: center;
+    padding: 10px 0;
+}
+
+.movie-genre {
+    padding: 0 18px;
+}
+
+.movie-add-icon{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.movie-plot-block {
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+hr{
+    width: 461px;
+    height: 1.5px;
+}
+
+hr:last-child{
+    display: none;
+}
