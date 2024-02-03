@@ -15,7 +15,11 @@ if(moviesFromLoSt){
 }
 
 document.addEventListener("click", function(e){
-        
+    
+    if(e.target.id === "search-btn"){
+        getMovies()
+    }
+
     if(e.target.dataset.add){
        handleAddClick(e.target.dataset.add)
     }
@@ -27,12 +31,6 @@ document.addEventListener("click", function(e){
             window.location.href = "watchlist.html"
         }
     }
-
-    else if(e.target.id === "search-btn"){
-        getMovies()
-        console.log("clicked")
-    }
-
 })
 
 function getTempleteHtml(dataArr , isWatchlist){
@@ -73,12 +71,12 @@ function getTempleteHtml(dataArr , isWatchlist){
 }
 
 async function getMovies(){
-    const searchRes = await fetch(`http://www.omdbapi.com/?apikey=cad9a741&s=${movieSearchEl.value}`)
+    const searchRes = await fetch(`https://www.omdbapi.com/?apikey=cad9a741&s=${movieSearchEl.value}`)
     const searchData = await searchRes.json()
     if(searchData.Search){
         moviesIdArr = searchData.Search.map(movie => movie.imdbID)
         moviesArr = await Promise.all (moviesIdArr.map(async (movieId) => {
-            const MovieRes = await fetch(`http://www.omdbapi.com/?apikey=cad9a741&i=${movieId}`)
+            const MovieRes = await fetch(`https://www.omdbapi.com/?apikey=cad9a741&i=${movieId}`)
             return movieData = await MovieRes.json()
         }))
 
@@ -104,7 +102,7 @@ function handleAddClick(movieID){
     })
 
     if(movieObj && !isDuplicate){
-        watchlistArr.push(movieObj)
+        watchlistArr.unshift(movieObj)
         localStorage.setItem("watchlistMovies", JSON.stringify(watchlistArr))
     }    
 }
