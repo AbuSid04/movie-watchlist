@@ -130,13 +130,17 @@ body {
     margin-top: 0.3em;
 }
 
-.movie-block, .movie-info-block, .movie-title-block, .movie-add-block, .movies-list{
+.movie-block, .movie-info-block, .movie-title-block, .movie-add-block, .watchlist{
     display: flex;
+}
+
+.watchlist{
+    flex-direction: column;
 }
 
 .movie-block{
     margin: 25px 44px;
-    padding: 0 0 25px;
+    height: 147.411px;
 }
 
 .movie-block p, 

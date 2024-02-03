@@ -46,7 +46,7 @@ function getTempleteHtml(dataArr , isWatchlist){
 
         templateHtml += `
             <div class="movie-block">
-                <img class="movie-poster" src=${movie.Poster} alt="">
+                <img class="movie-poster" src=${movie.Poster} alt="${movie.Type}">
                 <div class="movie-info-block">
                     <div class="movie-title-block">
                         <h2 class="movie-title">${movie.Title}</h2>
@@ -79,7 +79,6 @@ async function getMovies(){
             const MovieRes = await fetch(`https://www.omdbapi.com/?apikey=cad9a741&i=${movieId}`)
             return movieData = await MovieRes.json()
         }))
-
         renderMovies()
     }
     else{
